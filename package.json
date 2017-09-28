@@ -1,21 +1,39 @@
 {
   "name": "pkcs11test",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple CLI application for PKCS#11 testing based on WebCrypto library",
+  "main": "out/index.js",
   "bin": {
     "pkcs11test": "out/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "pub": "npm version patch && npm publish && git push"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PeculiarVentures/pkcs11test.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "webcrypto",
+    "pkcs11",
+    "crypto",
+    "test",
+    "rsa",
+    "elliptic-curves"
+  ],
+  "contributors": [
+    {
+      "name": "Miroshin Stepan",
+      "email": "microshine@mail.ru",
+      "url": "https://github.com/microshine"
+    }
+  ],
+  "author": "PeculiarVentures",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/PeculiarVentures/pkcs11test/issues"
   },
@@ -27,6 +45,7 @@
   },
   "devDependencies": {
     "@types/minimist": "^1.2.0",
-    "@types/node": "^8.0.31"
+    "@types/node": "^8.0.31",
+    "typescript": "^2.5.3"
   }
 }
