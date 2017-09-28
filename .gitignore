@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# helper
+cmd.md
+
+# build
+out
