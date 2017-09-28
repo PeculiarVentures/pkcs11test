@@ -31,6 +31,24 @@ async function Main() {
                 string: ["pin"],
             });
 
+            if (argv.help) {
+                // Print help info
+                console.log();
+                console.log("Usage: pkcs11test <path/to/pkcs11.lib> <params>");
+                console.log();
+                console.log("Params:");
+                console.log("  help   Help info about pkcs11test program");
+                console.log("  pin    PIN for PKCS#11 user session");
+                console.log("  slot   index of slot in PKCS#11 module. Default is 0");
+                console.log("  write  sets token to read/write mode");
+                console.log();
+                console.log("Examples");
+                console.log("  pkcs11test /usr/local/lib/softhsm/libsofthsm2.so -p password -w");
+                console.log("  pkcs11test /usr/local/lib/libeTPkcs11.dylib --pin password --slot 0 --write");
+                console.log();
+                return;
+            }
+
             crypto.pkcs11 = new Pkcs11Crypto({
                 library: argv._[0],
                 pin: argv.pin,
