@@ -1,6 +1,6 @@
 {
   "name": "pkcs11test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple CLI application for PKCS#11 testing based on WebCrypto library",
   "main": "out/index.js",
   "bin": {
